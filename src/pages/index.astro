@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
+import CertificationsBanner from '../components/CertificationsBanner.astro';
 import HardwareShowcase from '../components/HardwareShowcase.astro';
+import SecurityConfigurator from '../components/SecurityConfigurator.astro';
 import BenefitsGrid from '../components/BenefitsGrid.astro';
 import AdvisorSection from '../components/AdvisorSection.astro';
 import SocialProof from '../components/SocialProof.astro';
@@ -11,13 +13,19 @@ import FaqSection from '../components/FaqSection.astro';
 <Layout
   title="Alarma Movistar Prosegur | Iris Benítez Asesora Especializada"
   description="Protege tu hogar o negocio con la Alarma Movistar Prosegur. Estudio de seguridad gratuito, instalación rápida en 24h y doble garantía. Habla con Iris Benítez al 639 26 85 26."
-  canonical="https://irisprosegur.com"
+  canonical="https://irisprosegur.vercel.app"
 >
   <!-- Interactive Hero with Hogar / Negocio Segmented Switch -->
   <HeroSection />
 
+  <!-- Official Technical Security Certifications Banner -->
+  <CertificationsBanner />
+
   <!-- Hardware Showcase with Kit Details & Floating Badges -->
   <HardwareShowcase />
+
+  <!-- Interactive 3-Step Security Configurator -->
+  <SecurityConfigurator />
 
   <!-- 6 Main Pillars & Operational Guarantees -->
   <BenefitsGrid />

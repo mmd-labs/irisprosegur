@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingActions from '../components/FloatingActions.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import { faqs } from '../data/faqs';
 
 interface Props {
   title?: string;
@@ -15,7 +16,7 @@ interface Props {
 const {
   title = "Alarma Movistar Prosegur | Iris Benítez Asesora Especializada",
   description = "Protege tu hogar o negocio con la Alarma Movistar Prosegur. Estudio de seguridad gratuito, instalación rápida y doble garantía. Contacta con Iris Benítez al 639 26 85 26.",
-  canonical = "https://irisprosegur.com",
+  canonical = "https://irisprosegur.vercel.app",
   image = "/images/kit-hogar.webp"
 } = Astro.props;
 
@@ -26,7 +27,7 @@ const jsonLd = {
   "description": "Asesora especializada en alarmas Movistar Prosegur para hogares y negocios. Estudio de seguridad personalizado gratuito.",
   "telephone": "+34639268526",
   "url": canonical,
-  "image": "https://irisprosegur.com/images/iris-portrait.webp",
+  "image": "https://irisprosegur.vercel.app/images/iris-portrait.webp",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
@@ -50,6 +51,19 @@ const jsonLd = {
     "https://wa.me/34639268526"
   ]
 };
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
 ---
 
 <!doctype html>
@@ -65,6 +79,7 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0B2739" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -82,16 +97,19 @@ const jsonLd = {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFD100'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/%3E%3C/svg%3E" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- WPO Preloads: Fonts & LCP Hero Image -->
+    <link rel="preload" href="/fonts/montserrat-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" href="/images/kit-hogar.webp" type="image/webp" fetchpriority="high" />
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data: LocalBusiness & FAQPage Rich Snippets -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   </head>
   <body class="bg-[#F8F9FA] text-[#1A1A1A] antialiased selection:bg-[#FFD100] selection:text-[#0B2739] min-h-screen flex flex-col">
     <Header />

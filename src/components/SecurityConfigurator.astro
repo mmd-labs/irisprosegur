@@ -1,0 +1,446 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section id="configurador" class="py-16 sm:py-24 bg-gradient-to-b from-[#F8F9FA] via-white to-[#F8F9FA] border-t border-b border-gray-200/80">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+      <span class="inline-block text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#00A9E0] bg-[#00A9E0]/10 px-3.5 py-1.5 rounded-full mb-3">
+        Estudio Personalizado Online
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-heading font-black text-[#0B2739] tracking-tight mb-4">
+        Configura tu sistema de alarma en 3 clics
+      </h2>
+      <p class="text-base sm:text-lg text-gray-600">
+        Descubre qué dispositivos necesitas exactamente y recibe tu propuesta con precio cerrado sin compromiso.
+      </p>
+    </div>
+
+    <!-- Interactive Card Container -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-200/90 relative overflow-hidden">
+      
+      <!-- Progress Bar & Step Indicator -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between text-xs sm:text-sm font-heading font-extrabold text-[#0B2739] mb-3">
+          <span id="config-step-label">Paso 1 de 3: Tipo de inmueble</span>
+          <span id="config-step-percent" class="text-[#00A9E0]">33% completado</span>
+        </div>
+        <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+          <div 
+            id="config-progress-bar" 
+            class="h-full bg-gradient-to-r from-[#00A9E0] to-[#FFD100] transition-all duration-300 rounded-full" 
+            style="width: 33.33%;"
+          ></div>
+        </div>
+      </div>
+
+      <!-- ================= STEP 1 ================= -->
+      <div id="step-1" class="config-step space-y-6">
+        <h3 class="text-lg sm:text-xl font-heading font-extrabold text-[#0B2739]">
+          1. ¿Qué tipo de propiedad necesitas proteger?
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="1"
+            data-value="Piso o Ático"
+            data-target="hogar"
+          >
+            <div class="w-12 h-12 rounded-xl bg-[#00A9E0]/15 text-[#00A9E0] flex items-center justify-center shrink-0 group-hover:bg-[#00A9E0] group-hover:text-white transition-colors">
+              <Icon name="home" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Piso o Ático Residencial</p>
+              <p class="text-xs text-gray-500 mt-1">Protección de puertas de entrada, ventanas y terrazas superiores.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="1"
+            data-value="Chalet o Casa Unifamiliar"
+            data-target="hogar"
+          >
+            <div class="w-12 h-12 rounded-xl bg-[#00A9E0]/15 text-[#00A9E0] flex items-center justify-center shrink-0 group-hover:bg-[#00A9E0] group-hover:text-white transition-colors">
+              <Icon name="shield" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Chalet o Casa Unifamiliar</p>
+              <p class="text-xs text-gray-500 mt-1">Seguridad perimetral, jardín, garaje y múltiples accesos.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="1"
+            data-value="Local Comercial o Tienda"
+            data-target="negocio"
+          >
+            <div class="w-12 h-12 rounded-xl bg-[#FFD100]/25 text-[#0B2739] flex items-center justify-center shrink-0 group-hover:bg-[#0B2739] group-hover:text-white transition-colors">
+              <Icon name="building" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Local Comercial o Tienda</p>
+              <p class="text-xs text-gray-500 mt-1">Escaparate, caja, control de apertura y cierre de empleados.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="1"
+            data-value="Oficina o Nave Industrial"
+            data-target="negocio"
+          >
+            <div class="w-12 h-12 rounded-xl bg-[#FFD100]/25 text-[#0B2739] flex items-center justify-center shrink-0 group-hover:bg-[#0B2739] group-hover:text-white transition-colors">
+              <Icon name="lock" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Oficina o Nave Industrial</p>
+              <p class="text-xs text-gray-500 mt-1">Grandes superficies, custodia de material y cámaras de alta resolución.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= STEP 2 ================= -->
+      <div id="step-2" class="config-step hidden space-y-6">
+        <h3 class="text-lg sm:text-xl font-heading font-extrabold text-[#0B2739]">
+          2. ¿Cuáles son las características principales del espacio?
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="2"
+            data-value="Con terraza, balcón o jardín exterior"
+          >
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#00A9E0] flex items-center justify-center shrink-0 group-hover:bg-[#00A9E0] group-hover:text-white transition-colors">
+              <Icon name="cctv" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Terraza, balcón o jardín</p>
+              <p class="text-xs text-gray-500 mt-1">Requiere detección exterior anticipada antes de entrar.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="2"
+            data-value="Hay mascotas en casa (perro o gato)"
+          >
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+              <Icon name="peace" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Hay mascotas en casa</p>
+              <p class="text-xs text-gray-500 mt-1">Instalaremos detectores Pet-Immune para evitar falsas alarmas.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="2"
+            data-value="Entrada única principal estándar"
+          >
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+              <Icon name="key" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Entrada única principal</p>
+              <p class="text-xs text-gray-500 mt-1">Configuración rápida y óptima para accesos directos.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="2"
+            data-value="Acceso de empleados o personal de servicio"
+          >
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+              <Icon name="rfid" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Varios usuarios o empleados</p>
+              <p class="text-xs text-gray-500 mt-1">Llaves inteligentes RFID para registrar entradas y salidas.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= STEP 3 ================= -->
+      <div id="step-3" class="config-step hidden space-y-6">
+        <h3 class="text-lg sm:text-xl font-heading font-extrabold text-[#0B2739]">
+          3. ¿Cuál es tu mayor prioridad de seguridad?
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="3"
+            data-value="Disuasión y evitar ocupación indebida"
+          >
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+              <Icon name="shield" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Evitar robos y ocupaciones</p>
+              <p class="text-xs text-gray-500 mt-1">Placas disuasorias oficiales y garantía de desalojo legal.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="3"
+            data-value="Aviso inmediato a Policía con imágenes en 29s"
+          >
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#00A9E0] flex items-center justify-center shrink-0 group-hover:bg-[#00A9E0] group-hover:text-white transition-colors">
+              <Icon name="police" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Aviso inmediato a Policía</p>
+              <p class="text-xs text-gray-500 mt-1">Verificación por vídeo en tiempo real ante la Central de Alarmas.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="3"
+            data-value="Cámaras de vídeo en directo y control desde el móvil"
+          >
+            <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+              <Icon name="camera-360" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Cámaras en directo en el móvil</p>
+              <p class="text-xs text-gray-500 mt-1">Ver qué ocurre en cualquier momento con audio bidireccional.</p>
+            </div>
+          </button>
+
+          <button 
+            type="button" 
+            class="config-btn group p-4 sm:p-5 rounded-2xl border-2 border-gray-200 hover:border-[#00A9E0] active:scale-98 text-left transition-all duration-200 flex items-start gap-4 hover:shadow-md"
+            data-step="3"
+            data-value="Precio cerrado garantizado sin subidas de cuota"
+          >
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+              <Icon name="euro" class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="font-heading font-extrabold text-base text-[#0B2739]">Precio fijo sin sorpresas</p>
+              <p class="text-xs text-gray-500 mt-1">Sin subidas sorpresa, instalación sin obras y equipo incluido.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= RESULT VIEW ================= -->
+      <div id="step-result" class="config-step hidden text-center py-4 space-y-6">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
+          <Icon name="check" class="w-8 h-8 text-emerald-600" />
+        </div>
+
+        <div>
+          <span class="text-xs font-heading font-extrabold uppercase tracking-wider bg-[#FFD100] text-[#0B2739] px-3.5 py-1 rounded-full shadow-2xs">
+            Recomendación Personalizada
+          </span>
+          <h3 id="result-kit-title" class="text-2xl sm:text-3xl font-heading font-black text-[#0B2739] mt-3 mb-2">
+            Kit SuperSeguridad Hogar con Cámara 360º de Regalo
+          </h3>
+          <p id="result-kit-desc" class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
+            Tu inmueble queda completamente cubierto con conexión 24/7 a Policía, aviso en menos de 29 segundos y asesoramiento directo con Iris Benítez.
+          </p>
+        </div>
+
+        <!-- Summary Recap Box -->
+        <div class="bg-[#F8F9FA] rounded-2xl p-4 sm:p-6 max-w-lg mx-auto text-left border border-gray-200/80 text-xs sm:text-sm space-y-2 text-gray-700">
+          <p class="flex items-center justify-between">
+            <span class="text-gray-500 font-medium">Inmueble:</span>
+            <strong id="recap-property" class="text-[#0B2739] font-bold">-</strong>
+          </p>
+          <p class="flex items-center justify-between">
+            <span class="text-gray-500 font-medium">Características:</span>
+            <strong id="recap-feature" class="text-[#0B2739] font-bold">-</strong>
+          </p>
+          <p class="flex items-center justify-between">
+            <span class="text-gray-500 font-medium">Prioridad elegida:</span>
+            <strong id="recap-priority" class="text-[#0B2739] font-bold">-</strong>
+          </p>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a 
+            id="result-whatsapp-btn"
+            href="https://wa.me/34639268526"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-black text-base px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+          >
+            <Icon name="whatsapp" class="w-5 h-5 text-white" />
+            <span>Pedir Estudio Gratuito por WhatsApp</span>
+          </a>
+
+          <button
+            id="config-restart-btn"
+            type="button"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-heading font-bold text-sm px-6 py-4 rounded-2xl transition-colors"
+          >
+            <span>Reiniciar configurador</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function initConfigurator() {
+    let currentStep = 1;
+    const selections = {
+      property: '',
+      target: 'hogar',
+      feature: '',
+      priority: ''
+    };
+
+    const stepLabel = document.getElementById('config-step-label');
+    const stepPercent = document.getElementById('config-step-percent');
+    const progressBar = document.getElementById('config-progress-bar');
+
+    const step1 = document.getElementById('step-1');
+    const step2 = document.getElementById('step-2');
+    const step3 = document.getElementById('step-3');
+    const stepResult = document.getElementById('step-result');
+
+    const resultTitle = document.getElementById('result-kit-title');
+    const resultDesc = document.getElementById('result-kit-desc');
+    const resultWaBtn = document.getElementById('result-whatsapp-btn');
+    const restartBtn = document.getElementById('config-restart-btn');
+
+    const recapProperty = document.getElementById('recap-property');
+    const recapFeature = document.getElementById('recap-feature');
+    const recapPriority = document.getElementById('recap-priority');
+
+    const buttons = document.querySelectorAll('.config-btn');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const step = btn.getAttribute('data-step');
+        const value = btn.getAttribute('data-value') || '';
+        const target = btn.getAttribute('data-target');
+
+        if (step === '1') {
+          selections.property = value;
+          if (target) selections.target = target;
+          goToStep(2);
+        } else if (step === '2') {
+          selections.feature = value;
+          goToStep(3);
+        } else if (step === '3') {
+          selections.priority = value;
+          showResult();
+        }
+      });
+    });
+
+    function goToStep(stepNumber: number) {
+      currentStep = stepNumber;
+      if (step1 && step2 && step3 && stepResult) {
+        step1.classList.add('hidden');
+        step2.classList.add('hidden');
+        step3.classList.add('hidden');
+        stepResult.classList.add('hidden');
+
+        if (stepNumber === 1) {
+          step1.classList.remove('hidden');
+          if (stepLabel) stepLabel.textContent = 'Paso 1 de 3: Tipo de inmueble';
+          if (stepPercent) stepPercent.textContent = '33% completado';
+          if (progressBar) progressBar.style.width = '33.33%';
+        } else if (stepNumber === 2) {
+          step2.classList.remove('hidden');
+          if (stepLabel) stepLabel.textContent = 'Paso 2 de 3: Características y accesos';
+          if (stepPercent) stepPercent.textContent = '66% completado';
+          if (progressBar) progressBar.style.width = '66.66%';
+        } else if (stepNumber === 3) {
+          step3.classList.remove('hidden');
+          if (stepLabel) stepLabel.textContent = 'Paso 3 de 3: Máxima prioridad';
+          if (stepPercent) stepPercent.textContent = '90% completado';
+          if (progressBar) progressBar.style.width = '90%';
+        }
+      }
+    }
+
+    function showResult() {
+      if (step1 && step2 && step3 && stepResult) {
+        step1.classList.add('hidden');
+        step2.classList.add('hidden');
+        step3.classList.add('hidden');
+        stepResult.classList.remove('hidden');
+
+        if (stepLabel) stepLabel.textContent = '¡Estudio completado con éxito!';
+        if (stepPercent) stepPercent.textContent = '100% completado';
+        if (progressBar) progressBar.style.width = '100%';
+
+        // Dynamic kit recommendation
+        let kitName = 'Kit Alarma Hogar Inteligente Movistar Prosegur';
+        let kitDesc = 'Tu inmueble queda completamente cubierto con conexión 24/7 a Policía, fotodetectores y control móvil total.';
+
+        if (selections.target === 'negocio') {
+          kitName = 'Superpack Negocio Alta Seguridad Profesional';
+          kitDesc = 'Protección integral homologada Grado 2 para tu negocio con precio cerrado, aviso prioritario y custodia de llaves.';
+        } else if (selections.feature.includes('mascotas')) {
+          kitName = 'Kit SuperSeguridad Hogar con Detectores Pet-Immune';
+          kitDesc = 'Detectores inteligentes que distinguen a tus mascotas para que se muevan libres sin disparar falsas alarmas, más cámara 360º de regalo.';
+        } else if (selections.feature.includes('terraza') || selections.property.includes('Chalet')) {
+          kitName = 'Kit Protección Integral Hogar con Detección Perimetral';
+          kitDesc = 'Doble barrera de protección: detección perimetral exterior y cámara 360º con audio bidireccional.';
+        }
+
+        if (resultTitle) resultTitle.textContent = kitName;
+        if (resultDesc) resultDesc.textContent = kitDesc;
+
+        if (recapProperty) recapProperty.textContent = selections.property;
+        if (recapFeature) recapFeature.textContent = selections.feature;
+        if (recapPriority) recapPriority.textContent = selections.priority;
+
+        // Formulate personalized WhatsApp message
+        const waText = encodeURIComponent(
+          `Hola Iris, he completado el configurador en tu web.\n` +
+          `• Inmueble: ${selections.property}\n` +
+          `• Característica: ${selections.feature}\n` +
+          `• Prioridad: ${selections.priority}\n` +
+          `Me interesa el ${kitName}. ¿Podrías darme un estudio gratuito y presupuesto cerrado?`
+        );
+
+        if (resultWaBtn) {
+          resultWaBtn.setAttribute('href', `https://wa.me/34639268526?text=${waText}`);
+        }
+      }
+    }
+
+    if (restartBtn) {
+      restartBtn.addEventListener('click', () => {
+        goToStep(1);
+      });
+    }
+  }
+
+  initConfigurator();
+  document.addEventListener('astro:page-load', initConfigurator);
+</script>
