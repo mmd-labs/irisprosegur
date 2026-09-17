@@ -1,0 +1,5 @@
+Contact: mailto:info@irisprosegur.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://irisprosegur.vercel.app/.well-known/security.txt
+Policy: https://irisprosegur.vercel.app/aviso-legal
