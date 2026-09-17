@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 const benefits = [
   {
     icon: `<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><path d="M12 14v4"/></svg>`,
@@ -84,7 +86,9 @@ const benefits = [
 
           <div class="mt-5 pt-4 border-t border-gray-100 flex items-center text-xs font-bold text-[#00A9E0]">
             <span>Incluido en tu cuota</span>
-            <span class="ml-auto text-gray-400">✓</span>
+            <span class="ml-auto text-emerald-500">
+              <Icon name="check" class="w-4 h-4" />
+            </span>
           </div>
         </div>
       ))}
@@ -93,23 +97,31 @@ const benefits = [
     <!-- Bottom Pillars Banner (from flyer) -->
     <div class="bg-[#0B2739] rounded-2xl p-6 sm:p-8 text-white shadow-xl">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
-        <div class="pt-3 md:pt-0">
-          <p class="text-2xl mb-1">🛡️</p>
+        <div class="pt-3 md:pt-0 flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-2 text-[#FFD100]">
+            <Icon name="shield" class="w-5 h-5" />
+          </div>
           <p class="font-heading font-extrabold text-sm sm:text-base text-[#FFD100]">MÁS SEGURIDAD</p>
           <p class="text-xs text-gray-300 mt-1">Disuasión policial activa</p>
         </div>
-        <div class="pt-3 md:pt-0">
-          <p class="text-2xl mb-1">🕊️</p>
+        <div class="pt-3 md:pt-0 flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-2 text-[#00A9E0]">
+            <Icon name="peace" class="w-5 h-5" />
+          </div>
           <p class="font-heading font-extrabold text-sm sm:text-base text-[#00A9E0]">MÁS TRANQUILIDAD</p>
           <p class="text-xs text-gray-300 mt-1">Respuesta inmediata</p>
         </div>
-        <div class="pt-3 md:pt-0">
-          <p class="text-2xl mb-1">❤️</p>
+        <div class="pt-3 md:pt-0 flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-2 text-[#FFD100]">
+            <Icon name="heart" class="w-5 h-5" />
+          </div>
           <p class="font-heading font-extrabold text-sm sm:text-base text-[#FFD100]">MÁS PROTECCIÓN</p>
           <p class="text-xs text-gray-300 mt-1">Doble garantía 24 meses</p>
         </div>
-        <div class="pt-3 md:pt-0">
-          <p class="text-2xl mb-1">🤝</p>
+        <div class="pt-3 md:pt-0 flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-2 text-white">
+            <Icon name="handshake" class="w-5 h-5" />
+          </div>
           <p class="font-heading font-extrabold text-sm sm:text-base text-white">SIEMPRE CONTIGO</p>
           <p class="text-xs text-gray-300 mt-1">Asesora Iris Benítez a tu lado</p>
         </div>

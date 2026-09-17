@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <footer class="bg-[#0B2739] text-white pt-14 pb-24 lg:pb-14 border-t border-white/10">
@@ -32,14 +33,18 @@
           Contacto Directo
         </h4>
         <ul class="space-y-2.5 text-sm text-gray-300">
-          <li class="flex items-center gap-2">
-            <span class="text-[#00A9E0]">📞</span>
+          <li class="flex items-center gap-2.5">
+            <span class="text-[#00A9E0]">
+              <Icon name="phone" class="w-4 h-4" />
+            </span>
             <a href="tel:+34639268526" class="hover:text-[#FFD100] transition-colors font-bold text-white">
               639 26 85 26
             </a>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="text-[#25D366]">💬</span>
+          <li class="flex items-center gap-2.5">
+            <span class="text-[#25D366]">
+              <Icon name="whatsapp" class="w-4 h-4" />
+            </span>
             <a 
               href="https://wa.me/34639268526?text=Hola%20Iris,%20estoy%20interesado%20en%20informaci%C3%B3n%20sobre%20las%20alarmas." 
               target="_blank" 
@@ -49,8 +54,10 @@
               WhatsApp Comercial
             </a>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="text-gray-400">👤</span>
+          <li class="flex items-center gap-2.5">
+            <span class="text-gray-400">
+              <Icon name="user" class="w-4 h-4" />
+            </span>
             <span>Iris Benítez - Asesora Especializada</span>
           </li>
         </ul>

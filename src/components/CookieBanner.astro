@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <div 
@@ -9,7 +10,9 @@
   aria-label="Aviso de cookies"
 >
   <div class="flex items-start gap-3 mb-3">
-    <div class="text-2xl">🍪</div>
+    <div class="p-2 rounded-xl bg-amber-50 text-amber-600 border border-amber-200/80 shrink-0">
+      <Icon name="cookie" class="w-5 h-5" />
+    </div>
     <div>
       <h4 class="text-sm font-heading font-black text-[#0B2739]">Gestionamos tu privacidad</h4>
       <p class="text-xs text-gray-600 mt-1 leading-relaxed">

@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-gray-200/80 transition-all duration-200 shadow-sm">
@@ -80,7 +81,8 @@
         rel="noopener noreferrer"
         class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow-sm"
       >
-        💬 Escribir por WhatsApp
+        <Icon name="whatsapp" class="w-5 h-5 text-white" />
+        <span>Escribir por WhatsApp</span>
       </a>
     </div>
   </div>

@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 const reviews = [
   {
     author: "Carlos M.",
@@ -35,8 +37,10 @@ const reviews = [
     
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-      <div class="flex items-center justify-center gap-1 text-[#FFD100] text-xl mb-3">
-        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      <div class="flex items-center justify-center gap-1 text-[#FFD100] mb-3">
+        {Array.from({ length: 5 }).map(() => (
+          <Icon name="star" class="w-5 h-5 text-[#FFD100]" />
+        ))}
         <span class="text-xs font-bold text-gray-700 ml-2 bg-white px-2.5 py-1 rounded-full border border-gray-200">4.9 / 5 Valoración Media</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-heading font-black text-[#0B2739] tracking-tight mb-4">
@@ -54,9 +58,9 @@ const reviews = [
           <div>
             <!-- Stars & Tag -->
             <div class="flex items-center justify-between mb-4">
-              <div class="flex text-[#FFD100] text-base">
+              <div class="flex items-center gap-0.5 text-[#FFD100]">
                 {Array.from({ length: rev.rating }).map(() => (
-                  <span>★</span>
+                  <Icon name="star" class="w-4 h-4 text-[#FFD100]" />
                 ))}
               </div>
               <span class={`text-[10px] font-heading font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md ${
@@ -76,7 +80,9 @@ const reviews = [
               <p class="text-sm font-heading font-black text-[#0B2739] flex items-center gap-1.5">
                 {rev.author}
                 {rev.verified && (
-                  <span class="text-emerald-500 text-xs" title="Cliente Verificado">✓</span>
+                  <span class="inline-flex items-center text-emerald-500" title="Cliente Verificado">
+                    <Icon name="check" class="w-3.5 h-3.5" />
+                  </span>
                 )}
               </p>
               <p class="text-xs text-gray-500">{rev.role}</p>
