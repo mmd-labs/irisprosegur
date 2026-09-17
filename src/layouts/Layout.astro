@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingActions from '../components/FloatingActions.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+}
+
+const {
+  title = "Alarma Movistar Prosegur | Iris Benítez Asesora Especializada",
+  description = "Protege tu hogar o negocio con la Alarma Movistar Prosegur. Estudio de seguridad gratuito, instalación rápida y doble garantía. Contacta con Iris Benítez al 639 26 85 26.",
+  canonical = "https://irisprosegur.com",
+  image = "/images/kit-hogar.webp"
+} = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Movistar Prosegur Alarmas - Iris Benítez",
+  "description": "Asesora especializada en alarmas Movistar Prosegur para hogares y negocios. Estudio de seguridad personalizado gratuito.",
+  "telephone": "+34639268526",
+  "url": canonical,
+  "image": "https://irisprosegur.com/images/iris-portrait.webp",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "21:00"
+  },
+  "areaServed": "ES",
+  "sameAs": [
+    "https://wa.me/34639268526"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Primary -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Movistar Prosegur Alarmas - Iris Benítez" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFD100'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/%3E%3C/svg%3E" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-[#F8F9FA] text-[#1A1A1A] antialiased selection:bg-[#FFD100] selection:text-[#0B2739] min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+    <FloatingActions />
+    <CookieBanner />
+  </body>
+</html>

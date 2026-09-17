@@ -1,0 +1,47 @@
+---
+---
+
+<!-- FLOATING WHATSAPP BUTTON (ALWAYS ACCESSIBLE BOTTOM-RIGHT) -->
+<aside class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 flex items-center group">
+  <!-- Tooltip on hover / initial prompt -->
+  <div class="hidden md:flex items-center mr-3 bg-white text-[#0B2739] text-xs font-heading font-extrabold px-3.5 py-2 rounded-2xl shadow-xl border border-gray-200 opacity-95 group-hover:opacity-100 transition-all pointer-events-none select-none">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-ping"></span>
+    ¿Dudas con tu alarma? ¡Escríbeme!
+  </div>
+
+  <a
+    href="https://wa.me/34639268526?text=Hola%20Iris,%20estoy%20interesado%20en%20recibir%20informaci%C3%B3n%20y%20asesoramiento%20sobre%20una%20alarma."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar con Iris Benítez por WhatsApp"
+    class="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20bd5a] active:scale-90 text-white rounded-full shadow-2xl hover:shadow-emerald-500/40 transition-all duration-300 relative border-2 border-white"
+  >
+    <span class="absolute -top-1 -right-1 flex h-4 w-4">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-400 border border-white"></span>
+    </span>
+
+    <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+    </svg>
+  </a>
+</aside>
+
+<!-- STICKY MOBILE CALL BAR (ONLY VISIBLE ON PHONES) -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-[#0B2739]/95 backdrop-blur-md p-2.5 sm:hidden border-t border-white/15 shadow-2xl flex items-center justify-between gap-3">
+  <div class="pl-2">
+    <p class="text-[10px] text-[#00A9E0] font-extrabold uppercase tracking-wider">Asesora Homologada</p>
+    <p class="text-xs font-bold text-white leading-tight">Iris Benítez</p>
+  </div>
+
+  <a
+    href="tel:+34639268526"
+    class="flex-1 flex items-center justify-center gap-2 bg-[#FFD100] hover:bg-[#ffe033] active:scale-95 text-[#0B2739] font-heading font-black text-sm py-2.5 px-4 rounded-xl shadow-md border border-amber-300"
+    aria-label="Llamar al 639 26 85 26"
+  >
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    <span>📞 LLAMAR: 639 26 85 26</span>
+  </a>
+</aside>

@@ -1,0 +1,21 @@
+{
+  "name": "irisprosegur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,114 @@
+---
+---
+
+<header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-gray-200/80 transition-all duration-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#00A9E0] rounded-lg p-1">
+      <div class="flex items-center gap-2">
+        <img 
+          src="/images/logo-movistar-prosegur.webp" 
+          alt="Movistar Prosegur Alarmas" 
+          class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          width="270"
+          height="75"
+          loading="eager"
+        />
+      </div>
+      <div class="hidden sm:flex flex-col border-l border-gray-200 pl-3">
+        <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#0B2739]">Agente Autorizado</span>
+        <span class="text-xs font-semibold text-[#00A9E0]">Iris Benítez</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#0B2739]">
+      <a href="#soluciones" class="hover:text-[#00A9E0] transition-colors py-1">Soluciones</a>
+      <a href="#equipamiento" class="hover:text-[#00A9E0] transition-colors py-1">Equipamiento</a>
+      <a href="#beneficios" class="hover:text-[#00A9E0] transition-colors py-1">Garantías</a>
+      <a href="#asesora" class="hover:text-[#00A9E0] transition-colors py-1">Tu Asesora</a>
+      <a href="#testimonios" class="hover:text-[#00A9E0] transition-colors py-1">Opiniones</a>
+      <a href="#faq" class="hover:text-[#00A9E0] transition-colors py-1">Dudas</a>
+    </nav>
+
+    <!-- Top CTA Button -->
+    <div class="flex items-center gap-3">
+      <a 
+        href="tel:+34639268526" 
+        class="inline-flex items-center justify-center gap-2 bg-[#FFD100] hover:bg-[#ffe033] active:scale-95 text-[#0B2739] font-heading font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all border border-amber-300/60"
+        aria-label="Llamar a Iris Benítez al 639 26 85 26"
+      >
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0B2739]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <span class="tracking-tight">639 26 85 26</span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="lg:hidden p-2 text-gray-700 hover:text-[#0B2739] focus:outline-none rounded-lg"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-5 space-y-2 shadow-lg">
+    <a href="#soluciones" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Soluciones (Hogar / Negocio)</a>
+    <a href="#equipamiento" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Equipamiento incluido</a>
+    <a href="#beneficios" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Garantías y Protección</a>
+    <a href="#asesora" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Tu Asesora Iris Benítez</a>
+    <a href="#testimonios" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Opiniones de clientes</a>
+    <a href="#faq" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-base font-semibold text-[#0B2739] hover:bg-gray-50 hover:text-[#00A9E0]">Preguntas frecuentes</a>
+    <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+      <a 
+        href="https://wa.me/34639268526?text=Hola%20Iris,%20estoy%20interesado%20en%20informaci%C3%B3n%20sobre%20una%20alarma%20Movistar%20Prosegur."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow-sm"
+      >
+        💬 Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (btn && menu && iconOpen && iconClose) {
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

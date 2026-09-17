@@ -1,0 +1,111 @@
+---
+const reviews = [
+  {
+    author: "Carlos M.",
+    role: "Dueño de Cafetería & Panadería",
+    segment: "Negocio",
+    rating: 5,
+    date: "Hace 2 semanas",
+    content: "Teníamos miedo a las falsas alarmas de madrugada y a los sustos en la factura mensual. Iris vino al local, nos explicó el Superpack Negocio con precio cerrado y en menos de 24 horas estaba todo montado. El aviso a policía y las cámaras directas en el móvil funcionan con una precisión total.",
+    verified: true
+  },
+  {
+    author: "Elena & David Gómez",
+    role: "Propietarios de Vivienda Unifamiliar",
+    segment: "Hogar",
+    rating: 5,
+    date: "Hace 1 mes",
+    content: "Queríamos proteger la casa por las vacaciones y nos agobiaba que nos cobraran cosas de más o tener que hacer obras. Iris fue súper atenta, nos regaló la cámara 360 y configuró los sensores para que nuestro perro no haga saltar la alarma. Trato de 10, de tú a tú.",
+    verified: true
+  },
+  {
+    author: "Marta R.",
+    role: "Piso Residencial",
+    segment: "Hogar",
+    rating: 5,
+    date: "Hace 3 semanas",
+    content: "Lo que más tranquilidad me dio fue la garantía antiocupación y el servicio de custodia de llaves con el vigilante Acuda. Iris no te vende una máquina, te asesora de verdad y te resuelve cualquier duda por WhatsApp al instante.",
+    verified: true
+  }
+];
+---
+
+<section id="testimonios" class="py-16 sm:py-20 bg-[#F8F9FA]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="flex items-center justify-center gap-1 text-[#FFD100] text-xl mb-3">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <span class="text-xs font-bold text-gray-700 ml-2 bg-white px-2.5 py-1 rounded-full border border-gray-200">4.9 / 5 Valoración Media</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-heading font-black text-[#0B2739] tracking-tight mb-4">
+        Familias y negocios que ya duermen tranquilos.
+      </h2>
+      <p class="text-base sm:text-lg text-gray-600">
+        La mejor garantía no es lo que decimos nosotros, sino la tranquilidad y cercanía que experimentan nuestros clientes.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+      {reviews.map((rev) => (
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-all duration-200 border border-gray-200/80 flex flex-col justify-between">
+          <div>
+            <!-- Stars & Tag -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-[#FFD100] text-base">
+                {Array.from({ length: rev.rating }).map(() => (
+                  <span>★</span>
+                ))}
+              </div>
+              <span class={`text-[10px] font-heading font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md ${
+                rev.segment === 'Hogar' ? 'bg-[#00A9E0]/10 text-[#00A9E0]' : 'bg-[#FFD100]/20 text-[#0B2739]'
+              }`}>
+                {rev.segment}
+              </span>
+            </div>
+
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed italic mb-6">
+              "{rev.content}"
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <p class="text-sm font-heading font-black text-[#0B2739] flex items-center gap-1.5">
+                {rev.author}
+                {rev.verified && (
+                  <span class="text-emerald-500 text-xs" title="Cliente Verificado">✓</span>
+                )}
+              </p>
+              <p class="text-xs text-gray-500">{rev.role}</p>
+            </div>
+            <span class="text-[11px] text-gray-400">{rev.date}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Trust Stats Strip -->
+    <div class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-xs grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-2xl sm:text-3xl font-heading font-black text-[#0B2739]">+1.500</p>
+        <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">Estudios de seguridad realizados</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-heading font-black text-[#00A9E0]">24 Horas</p>
+        <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">Instalación rápida sin obras</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-heading font-black text-[#0B2739]">100%</p>
+        <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">Asesoramiento gratuito y sin compromiso</p>
+      </div>
+      <div>
+        <p class="text-2xl sm:text-3xl font-heading font-black text-[#FFD100] drop-shadow-xs">24 Meses</p>
+        <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">Doble garantía y custodia de llaves</p>
+      </div>
+    </div>
+
+  </div>
+</section>
